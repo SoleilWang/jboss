@@ -15,7 +15,16 @@
         <servlet-class>
             org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher</servlet-class>
     </servlet>
-    
+    <filter>
+    <filter-name>AccessLogFilter</filter-name>
+        <filter-class>
+            com.alex.wang.filter.AccessFilter
+        </filter-class>  
+   </filter>
+    <filter-mapping>
+        <filter-name>AccessLogFilter</filter-name>
+        <url-pattern>/alex/*</url-pattern>
+    </filter-mapping>
 
     
     <servlet-mapping>

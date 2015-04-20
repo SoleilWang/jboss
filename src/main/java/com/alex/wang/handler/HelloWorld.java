@@ -18,7 +18,7 @@ public class HelloWorld {
     public Response getIssue(@PathParam("param") String msg)
             throws URISyntaxException, FileNotFoundException {
         String result = "Helloword "+msg;
-        LoggerManager.recordInfo(msg);
+        LoggerManager.recordInfo(result);
         return Response.status(200).entity(result).build();
  
     }
